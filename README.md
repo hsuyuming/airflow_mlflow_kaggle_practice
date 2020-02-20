@@ -99,3 +99,9 @@ params = {
 #### 6. Kaggle Leaderboard
 [Leaderboard](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/leaderboard)
 ![](assets/leaderboard.png)
+
+
+vim /usr/local/airflow/.local/lib/python3.7/site-packages/mlflow/lightgbm.py
+:set nu
+90gg
+lgb_model.booster_.save_model(model_data_path)
