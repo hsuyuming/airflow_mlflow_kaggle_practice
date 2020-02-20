@@ -1,0 +1,8 @@
+channels:
+- defaults
+dependencies:
+- python=3.7.6
+- pip:
+  - mlflow
+  - xgboost==0.90
+name: mlflow-env
