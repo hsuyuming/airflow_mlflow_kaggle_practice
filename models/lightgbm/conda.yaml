@@ -4,5 +4,5 @@ dependencies:
 - python=3.7.5
 - pip:
   - mlflow
-  - xgboost==0.90
+  - lightgbm==2.3.1
 name: mlflow-env

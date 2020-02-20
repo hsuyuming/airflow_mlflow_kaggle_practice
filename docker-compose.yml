@@ -39,6 +39,7 @@ services:
         ports:
             - "5000:5000"
             - "5051:5051"                               # expose port
+            - "5052:5052" 
         volumes:
             - ./models:/root/models
         command: 'mlflow server --backend-store-uri ./mlflow --host 0.0.0.0 --port 5000'

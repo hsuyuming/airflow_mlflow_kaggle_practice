@@ -1,4 +1,4 @@
-FROM puckel/docker-airflow:latest
+FROM puckel/docker-airflow:1.10.6
 
 WORKDIR /usr/local/airflow/
 COPY requirements.txt .

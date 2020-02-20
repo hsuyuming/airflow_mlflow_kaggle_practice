@@ -1,0 +1,10 @@
+flavors:
+  lightgbm:
+    data: model.lgb
+    lgb_version: 2.3.1
+  python_function:
+    data: model.lgb
+    env: conda.yaml
+    loader_module: mlflow.lightgbm
+    python_version: 3.7.5
+utc_time_created: '2020-02-20 20:17:40.177799'

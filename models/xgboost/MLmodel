@@ -3,8 +3,8 @@ flavors:
     data: model.xgb
     env: conda.yaml
     loader_module: mlflow.xgboost
-    python_version: 3.7.6
+    python_version: 3.7.5
   xgboost:
     data: model.xgb
     xgb_version: '0.90'
-utc_time_created: '2020-02-20 17:38:43.872164'
+utc_time_created: '2020-02-20 20:17:40.171452'
