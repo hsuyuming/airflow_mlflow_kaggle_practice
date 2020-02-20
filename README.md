@@ -1,56 +1,3 @@
-# 2019-minicourse-submarine
-DESIGN AND IMPLEMENTATION OF A MACHINE LEARNING PLATFORM
-
-2019-minicourse-submarine [slide](https://docs.google.com/presentation/d/1KdOmE7ErS5SAeTr_YURkSXUwUPlNzA7RJchDUiN7F2U/edit?usp=sharing), [doc](https://hackmd.io/@pingsutw/H11HN5Z1U)
-
-![](https://raw.githubusercontent.com/apache/hadoop-submarine/master/docs/assets/color_logo_with_text.png)
-
-### What is Apache Submarine?
-
-Apache Submarine is a unified AI platform which allows engineers and data scientists to run Machine Learning and Deep Learning workload in distributed cluster.
-
-Goals of Submarine:
-- It allows jobs easy access data/models in HDFS and other storages.
-- Can launch services to serve TensorFlow/PyTorch models.
-- Support run distributed TensorFlow jobs with simple configs.
-- Support run user-specified Docker images.
-- Support specify GPU and other resources.
-- Support launch TensorBoard for training jobs if user specified.
-- Support customized DNS name for roles (like TensorBoard.$user.$domain:6006)
-
-### Prerequisites
-- Maven 3.3 or later ( 3.6.2 is known to fail, see SUBMARINE-273 )
-- JDK 1.8
-
-
-### Install mini-submarine
-```shell=
-git clone https://github.com/apache/submarine.git
-cd submarine
-git submodule update --init --recursive
-mvn clean install package -DskipTests
-cd dev-support/mini-submarine 
-./build_mini-submarine.sh
-```
-
-### Pull from dockerhub without maven and java
-```shell=
-docker pull hadoopsubmarine/mini-submarine:0.3.0-SNAPSHOT 
-```
-
-### Run mini-submarine
-```shell=
-docker run -it -h submarine-dev --net=bridge --privileged -P local/mini-submarine:0.3.0-SNAPSHOT /bin/bash
-
-# In the container, use root user to bootstrap hdfs and yarn
-/tmp/hadoop-config/bootstrap.sh
-
-su yarn
-# Run distributed training on hadoop
-cd && cd submarine && ./run_submarine_mnist_tony.sh
-```
-
-
 ### ML code in a real-world ML system is a lot smaller than the infrastructure 
 ![](https://miro.medium.com/max/840/1*NB4nRkgULkiCkl10lSOhlg.png)
 
@@ -60,12 +7,8 @@ cd && cd submarine && ./run_submarine_mnist_tony.sh
 
 ![Machine Learning Platform](https://miro.medium.com/max/1825/1*EqIU3MHdhjRkP22vvku4XA.png)
 
-
-
 ## About this tutorial
  After this tutorial, you will know :
- 
- **[Apache Submarine](https://github.com/apache/submarine)** - is Cloud Native Machine Learning Platform
  
  **[Apache airflow](https://github.com/apache/airflow)** -
  a platform to programmatically author, schedule, and monitor workflows.
